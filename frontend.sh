@@ -1,4 +1,4 @@
-echo "\e[33mInstalling Nginx Server\e[0m"
+echo -e "\e[33mInstalling Nginx Server\e[0m"
 dnf install nginx -y 
 
 echo -e "\e[33mRemoving the old app content\e[0m"
@@ -13,6 +13,6 @@ unzip /tmp/frontend.zip
 
 # vim /etc/nginx/default.d/roboshop.conf 
 
-cho -e "\e[33mstarting the nginx server\e[0m"
+echo -e "\e[33mstarting the nginx server\e[0m"
 systemctl enable nginx
 systemctl restart nginx
