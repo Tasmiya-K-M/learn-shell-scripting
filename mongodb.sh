@@ -1,6 +1,3 @@
-echo -e "\e[33msetting the hostname\e[0m"
-set-hostname mongodb
-
 echo -e "\e[33mSetuping the MongoDB repo file\e[0m"
 cp  mongo.repo /etc/yum.repos.d/ &>> /tmp/roboshop.log
 
