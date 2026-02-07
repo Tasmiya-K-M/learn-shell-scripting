@@ -14,10 +14,13 @@ echo -e "\e[33mExtracting Frontend Content\e[0m"
 cd /usr/share/nginx/html 
 unzip /tmp/frontend.zip &>> /tmp/roboshop.log
 
+echo -e "\e[33mpwd\e[0m"
+pwd
+
 # vim /etc/nginx/default.d/roboshop.conf 
 echo -e "\e[33mCreating Nginx Reverse Proxy Configuration\e[0m"
 cp roboshop.conf /etc/nginx/default.d/
 
 echo -e "\e[33mStarting Nginx Server\e[0m"
-systemctl enable nginx
-systemctl restart nginx
+systemctl enable nginx &>> /tmp/roboshop.log
+systemctl restart nginx &>> /tmp/roboshop.log
