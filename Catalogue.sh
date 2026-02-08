@@ -1,4 +1,4 @@
-cho -e "\e[33msetting the hostname\e[0m"
+echo -e "\e[33msetting the hostname\e[0m"
 hostnamectl set-hostname catalogue
 
 echo -e "\e[33mDisabling the default nodejs version\e[0m"
