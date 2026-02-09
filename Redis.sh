@@ -13,7 +13,7 @@ dnf install redis -y &>> /tmp/roboshop.log
 
 #Edit the config file
 echo -e "\e[33m editing the config file\e[0m"
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/redis.conf /etc/redis/redis.conf
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/redis.conf
 
 #start and enable the redis service
 echo -e "\e[33m enable and restart service\e[0m"
