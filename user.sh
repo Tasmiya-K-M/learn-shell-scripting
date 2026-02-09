@@ -1,11 +1,11 @@
 # disable the default nodejs and enable the nodejs 18
 echo -e "\e[33mdisable the default nodejs and enable the nodejs 18\e[0m"
-dnf module disable nodejs -y
-dnf module enable nodejs:18 -y
+dnf module disable nodejs -y &>> /tmp/roboshop.log
+dnf module enable nodejs:18 -y &>> /tmp/roboshop.log
 
 #install nodejs 18
 echo -e "\e[33minstall nodejs 18\e[0m"
-dnf install nodejs -y
+dnf install nodejs -y &>> /tmp/roboshop.log
 
 #create user
 echo -e "\e[33mcreate user\e[0m"
@@ -18,16 +18,16 @@ mkdir /app
 
 #download the app code
 echo -e "\e[33mdownload the app code\e[0m"
-curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip 
+curl -L -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip &>> /tmp/roboshop.log
 
 #unzip the app code under /app directory
 echo -e "\e[33munzip the app code under /app directory\e[0m"
 cd /app 
-unzip /tmp/user.zip
+unzip /tmp/user.zip &>> /tmp/roboshop.log
 
 #install the dependencies
 echo -e "\e[33minstall the dependencies\e[0m"
-npm install 
+npm install &>> /tmp/roboshop.log
 
 #service file
 echo -e "\e[33mservice file\e[0m"
@@ -35,9 +35,9 @@ cp /home/centos/learn-shell/user.service /etc/systemd/system/
 
 #load the servcie
 echo -e "\e[33mload service file\e[0m"
-systemctl daemon-reload
+systemctl daemon-reload 
 
 #enable and restart the service
 echo -e "\e[33menable and restart the service\e[0m"
-systemctl enable user 
-systemctl restart user
+systemctl enable user &>> /tmp/roboshop.log
+systemctl restart user 
