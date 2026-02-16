@@ -5,4 +5,11 @@ function print_hello() {
 print_hello
 
 
+function print_arguments() {
+    echo script name - $0 # print script name
+    echo first argument - $1 # print first argument
+    echo all arguments - $* # print all arguments
+    echo number of arguemnts - $# # print number of arguemnts
+}
 
+print_arguments xyz 123
