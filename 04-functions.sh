@@ -13,3 +13,11 @@ function print_arguments() {
 }
 
 print_arguments xyz 123
+
+#exit from function use return
+exit_sample_demo() {
+    echo hi
+    return 
+    echo hello
+}
+echo exit status of exit_sample_demo - $?
