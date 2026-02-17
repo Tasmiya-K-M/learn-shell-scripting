@@ -17,7 +17,7 @@ print_arguments xyz 123
 #exit from function use return
 exit_sample_demo() {
     echo hi
-    return 
+    return 1
     echo hello
 }
 exit_sample_demo
