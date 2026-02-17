@@ -8,8 +8,9 @@ echo first argument - $1 # print first argument
 echo all arguments - $* # print all arguments
 echo number of arguemnts - $# # print number of arguemnts
 
+#print sum of the numbers
 sum=$((1+1))
 echo $sum
 
-
+# print today date
 today_date=$(date)

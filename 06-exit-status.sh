@@ -6,3 +6,8 @@
 
 a = 5
 echo $?
+
+# by default the exit status of exit is 0, when "exit 1" it will return "1"
+echo hello
+exit
+echo bye
