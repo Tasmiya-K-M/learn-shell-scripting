@@ -15,5 +15,5 @@ mv mediawiki-1.45.1 mediawiki
 rm -rf /var/www/html/*
 cp -r mediawiki /var/www/html/
 
-systemctl enable httpd
+systemctl enable httpd &>> /var/log/mediawiki.log
 systemctl restart httpd
