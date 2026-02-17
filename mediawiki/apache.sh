@@ -13,3 +13,6 @@ yum install httpd -y &>> /var/log/mediawiki.log
 mv mediawiki-1.45.1 mediawiki
 rm -rf /var/www/html/*
 cp -r mediawiki /var/www/html/
+
+systemctl enable httpd
+systemctl restart httpd
