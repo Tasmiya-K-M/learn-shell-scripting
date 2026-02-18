@@ -46,7 +46,21 @@ ping other server from ansible server using user and password
 
 3. How ansible handles ?
     Install Collections, File Collections, Service Collections ----> Ansible playbook
-    
+
+4. Plain, list , map/dictionary in yaml
+    a: 10 --> Plain
+    b: [ 99, 89 ] --> list
+    b:            --> list
+     - 99
+     - 89
+    c:            --> dict
+       course: Devops
+       time: 730am
+    c: { course: Devops; time: 730am}. --> dict
+
+
+
+
 
 
 
