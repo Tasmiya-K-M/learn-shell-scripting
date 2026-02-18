@@ -31,3 +31,11 @@ Tools that helps in making OS level changes with much more advanced features are
 
 <!-- ANSIBLE -->
 Ansible supports both push and pull, we need to understand what works for us better and we need to choose one or both according to our requirements.
+
+1. How ansible manages the node? 
+    ansible uses SSH
+
+ping other server from ansible server using user and password
+    for single node --> ansible -i private_ip, all -m ping -e ansible_user=user -e ansible_password=password (all groups)
+    for multiple nodes --> ansible -i /tmp/inv all -m ping -e ansible_user=user -e ansible_password=password
+    for specific group --> ansible -i /tmp/inv group_name -m ping -e ansible_user=user -e ansible_password=password
